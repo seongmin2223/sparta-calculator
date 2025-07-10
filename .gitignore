@@ -1,11 +1,12 @@
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+# 빌드 결과물
+/build/
+/out/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar # Gradle Wrapper는 포함
+bin/ # Eclipse 등에서 생성되는 바이너리 디렉토리
 
-### IntelliJ IDEA ###
-.idea
+# IDE 관련 파일 (IntelliJ IDEA, Eclipse, NetBeans, VS Code 등)
+.idea/
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
@@ -13,9 +14,7 @@ build/
 *.iws
 *.iml
 *.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+out/ # IntelliJ IDEA 빌드 결과물 (이미 위에 있지만, 명확성을 위해 IDE 섹션에도 둘 수 있음)
 
 ### Eclipse ###
 .apt_generated
@@ -25,9 +24,6 @@ out/
 .settings
 .springBeans
 .sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
 ### NetBeans ###
 /nbproject/private/
@@ -39,5 +35,21 @@ bin/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
-.DS_Store
+# 운영체제 관련 파일
+.DS_Store # macOS
+Thumbs.db # Windows
+desktop.ini # Windows
+
+# 로그 파일
+*.log
+/logs/
+
+# 임시 파일
+*.tmp
+*.bak
+*.swp
+*~
+
+# Gradle Wrapper 실행 파일 (Windows에서 생성될 수 있음)
+gradlew.bat.orig
+gradlew.orig
