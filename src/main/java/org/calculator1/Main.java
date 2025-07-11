@@ -11,7 +11,7 @@ public class Main {
         while (true) {
             System.out.println("계산기입니다. 'exit'을 입력하면 종료됩니다.");
             System.out.print("첫 번째 숫자를 입력하세요 (종료하려면 'exit' 입력): ");
-            String input = scanner.nextLine();
+            String input = scanner.nextLine().trim();
 
             // "exit"이 입력되면 프로그램 종료
             if (input.equalsIgnoreCase("exit")) {
@@ -29,11 +29,11 @@ public class Main {
 
                 // 두 번째 숫자 입력 받기
                 System.out.print("두 번째 숫자를 입력하세요: ");
-                secondNum = Integer.parseInt(scanner.nextLine());
+                secondNum = Integer.parseInt(scanner.nextLine().trim());
 
                 // 사칙연산 기호 입력 받기
                 System.out.print("사칙연산 기호를 입력하세요 (+, -, *, /): ");
-                String opInput = scanner.nextLine();
+                String opInput = scanner.nextLine().trim();
 
                 // 연산 기호가 한 글자인지 확인
                 if (opInput.length() != 1) {
