@@ -1,4 +1,3 @@
-// Calculator.java
 package org.calculator2;
 
 import java.util.ArrayList;
