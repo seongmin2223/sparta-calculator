@@ -63,7 +63,7 @@ Java (주로 사용된 언어)
 javac org/calculator1/Main.java
 java org.calculator1.Main
 
-``` 2단계 계산기 실행 (예시)
+ 2단계 계산기 실행 (예시)
  Main.java 및 Calculator.java 파일이 있는 디렉토리에서
  먼저 Calculator.java를 컴파일합니다.
 javac org/calculator2/Calculator.java
