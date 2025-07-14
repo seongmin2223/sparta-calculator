@@ -76,26 +76,25 @@ public class Calculator {
         }
     }
 
-//    /**
-//     *
-//     * 특정 인덱스를 삭제하는 메소드
-//     */
-//    public void removeResultAtIndex(int indexToDelete) {
-//        if (indexToDelete >= 0 && indexToDelete < results.size()) {
-//            results.remove(indexToDelete);
-//        }
-//    }
-//
-//    /**
-//     * 특정 값을 가진 첫 번째 연산 결과를 리스트에서 삭제합니다.
-//     *
-//     * @param valueToRemove 삭제할 값
-//     * @return 해당 값을 찾아 삭제했으면 true, 찾지 못했으면 false
-//     */
-//    public boolean removeResultByValue(double valueToRemove) {
-//        return results.remove(valueToRemove);
-//    }
+    // /**
+    //  *
+    //  * 특정 인덱스를 삭제하는 메소드
+    //  */
+    // public void removeResultAtIndex(int indexToDelete) {
+    //     if (indexToDelete >= 0 && indexToDelete < results.size()) {
+    //         results.remove(indexToDelete);
+    //     }
+    // }
 
+    // /**
+    //  * 특정 값을 가진 첫 번째 연산 결과를 리스트에서 삭제합니다.
+    //  *
+    //  * @param valueToRemove 삭제할 값
+    //  * @return 해당 값을 찾아 삭제했으면 true, 찾지 못했으면 false
+    //  */
+    // public boolean removeResultByValue(double valueToRemove) {
+    //     return results.remove(valueToRemove);
+    // }
     /**
      * Calculator 클래스에 저장된 모든 연산 결과를 삭제하는 메서드입니다.
      */
