@@ -95,7 +95,6 @@ public class Calculator {
     // public boolean removeResultByValue(double valueToRemove) {
     //     return results.remove(valueToRemove);
     // }
-
     /**
      * Calculator 클래스에 저장된 모든 연산 결과를 삭제하는 메서드입니다.
      */
