@@ -61,11 +61,17 @@ public class Main {
             System.out.println("현재까지의 연산 결과들: " + allResults);
 
             // 가장 오래된 연산 결과 삭제 기능 활용
-            System.out.print("가장 오래된 연산 결과를 삭제하시겠습니까? (y/n): ");
+            System.out.print("가장 오래된 연산 결과를 삭제하시겠습니까?" +
+                    " all 을 입력하면 전체삭제됩니다." +
+                    " (y/n/all): ");
+
             String removeChoice = sc.next();
+
             if (removeChoice.equalsIgnoreCase("y")) {
                 calculator.removeFirstResult();
                 System.out.println("삭제 후 현재까지의 연산 결과들: " + calculator.getResults());
+            } else if(removeChoice.equalsIgnoreCase("all")) {
+                calculator.clearResults();
             }
 
             System.out.println("\n더 계산하시겠습니까? (exit 입력 시 종료)");

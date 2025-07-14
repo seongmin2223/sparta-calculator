@@ -66,16 +66,6 @@ public class Calculator {
     }
 
     /**
-     * 연산 결과 컬렉션 필드의 값을 설정하는 Setter 메서드입니다.
-     * (이 예제에서는 직접 사용되지 않지만, 요구사항에 따라 구현)
-     *
-     * @param results 설정할 연산 결과 리스트
-     */
-    public void setResults(List<Double> results) {
-        this.results = new ArrayList<>(results); // 외부 리스트의 복사본을 저장
-    }
-
-    /**
      * Calculator 클래스에 저장된 연산 결과들 중 가장 먼저 저장된 데이터를 삭제하는 메서드입니다.
      */
     public void removeFirstResult() {
