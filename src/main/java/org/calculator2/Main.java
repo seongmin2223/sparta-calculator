@@ -29,9 +29,11 @@ public class Main {
 
                 System.out.print("두 번째 숫자를 입력하세요: ");
                 num2 = sc.nextInt();
+                sc.nextLine(); // nextInt() 후 남은 개행 문자 소비
 
                 System.out.print("사칙연산 기호를 입력하세요 (+, -, *, /): ");
                 operator = sc.next().charAt(0);
+                sc.nextLine(); // next().charAt(0) 후 남은 개행 문자 소비
 
             } catch (NumberFormatException e) {
                 System.out.println("오류: 잘못된 숫자 입력입니다. 다시 시도해주세요.");
@@ -73,6 +75,64 @@ public class Main {
             } else if(removeChoice.equalsIgnoreCase("all")) {
                 calculator.clearResults();
             }
+
+//            // --- 특정 요소 삭제 기능 추가 ---
+//            if (!allResults.isEmpty()) {
+//                System.out.println("\n--- 연산 결과 삭제 ---");
+//                System.out.println("현재 연산 결과 목록:");
+//                for (int i = 0; i < allResults.size(); i++) {
+//                    System.out.println((i + 1) + ". " + allResults.get(i)); // 사용자에게 1부터 시작하는 번호로 보여줌
+//                }
+//
+//                System.out.print("삭제할 항목을 선택하세요 (번호 입력, 'v [값]'로 값 삭제, 'y'로 첫 번째, 'last'로 마지막, 'all'로 전체, 'n'으로 취소): ");
+//                String removeChoice = sc.nextLine().trim(); // 한 줄 전체를 읽어서 "v 10.5" 같은 입력 처리
+//
+//                if (removeChoice.equalsIgnoreCase("n")) {
+//                    System.out.println("삭제를 취소합니다.");
+//                } else if (removeChoice.equalsIgnoreCase("y")) {
+//                    calculator.removeFirstResult();
+//                    System.out.println("삭제 후 현재까지의 연산 결과들: " + calculator.getResults());
+//                } else if (removeChoice.equalsIgnoreCase("last")) {
+//                    if (!allResults.isEmpty()) {
+//                        calculator.removeResultAtIndex(allResults.size() - 1);
+//                        System.out.println("가장 최근의 연산 결과가 삭제되었습니다.");
+//                    } else {
+//                        System.out.println("삭제할 연산 결과가 없습니다.");
+//                    }
+//                } else if (removeChoice.equalsIgnoreCase("all")) {
+//                    calculator.clearResults();
+//                    System.out.println("모든 연산 결과가 삭제되었습니다.");
+//                } else if (removeChoice.toLowerCase().startsWith("v ")) { // 'v '로 시작하면 값으로 삭제
+//                    try {
+//                        String valueString = removeChoice.substring(2).trim(); // 'v ' 뒤의 문자열 추출
+//                        double valueToDelete = Double.parseDouble(valueString); // 숫자로 변환
+//
+//                        if (calculator.removeResultByValue(valueToDelete)) {
+//                            System.out.println("값 '" + valueToDelete + "'을(를) 가진 연산 결과가 삭제되었습니다.");
+//                        } else {
+//                            System.out.println("오류: 값 '" + valueToDelete + "'을(를) 가진 연산 결과를 찾을 수 없습니다.");
+//                        }
+//                    } catch (NumberFormatException e) {
+//                        System.out.println("오류: 'v [값]' 형식으로 올바른 숫자를 입력해주세요.");
+//                    }
+//                } else { // 그 외의 경우, 번호(인덱스)로 삭제 시도
+//                    try {
+//                        int indexToDelete = Integer.parseInt(removeChoice) - 1; // 사용자 입력은 1부터 시작하므로 1 빼기
+//
+//                        if (indexToDelete >= 0 && indexToDelete < allResults.size()) {
+//                            calculator.removeResultAtIndex(indexToDelete);
+//                            System.out.println("선택된 연산 결과가 삭제되었습니다.");
+//                        } else {
+//                            System.out.println("오류: 유효하지 않은 번호입니다. 다시 시도해주세요.");
+//                        }
+//                    } catch (NumberFormatException e) {
+//                        System.out.println("오류: 잘못된 입력입니다. 번호, 'v [값]', 'y', 'last', 'all', 또는 'n'을 입력해주세요.");
+//                    }
+//                }
+//            } else {
+//                System.out.println("\n삭제할 연산 결과가 없습니다.");
+//            }
+//            // --- 특정 요소 삭제 기능 추가 끝 ---
 
             System.out.println("\n더 계산하시겠습니까? (exit 입력 시 종료)");
             // 이 부분은 이미 위에서 'exit' 처리를 하고 있으므로 중복될 수 있습니다.
